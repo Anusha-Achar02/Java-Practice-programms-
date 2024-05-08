@@ -1,21 +1,33 @@
-package classesandoblects;
-
 import java.util.Scanner;
-
-public class Program1 {
-
-	public static void main(String[] args) {
-		float[] arr = new float[7];
-		Scanner scan = new Scanner(System.in);
-		for (int i = 0; i <= 6; i++) {
-			System.out.println("Enter the percentage of student :" + (i + 1));
-			arr[i] = scan.nextFloat();
+class Program1 
+{
+	public static void main(String[] args)
+	{
+		Scanner scan = new Scanner (System.in);
+		System.out.println("Enter the number of schools,classes and students");
+		int[][][]arr = new int[scan.nextInt()][scan.nextInt()][scan.nextInt()];
+		for (int i=0;i<=arr.length-1;i++)
+		{
+			for (int j=0;j<=arr.length-1;j++)
+			{
+				for (int k=0;k<=arr.length-1;k++)
+				{
+					System.out.println("Enter the marks of school:"+(i+1)+"class:"+(j+1)+"students"+(k+1));
+					arr[i][j][k]=scan.nextInt();
+				}
+			}
 		}
-		System.out.println("The percentage of students are:");
-		for (int i = 0; i <= 6; i++) {
-			System.out.println(arr[i]);
+		for (int i=0;i<=arr.length-1;i++)
+		{
+			for (int j=0;j<=arr.length-1;j++)
+			{
+				for (int k=0;k<=arr.length-1;k++)
+				{
+					System.out.println(arr[i][j][k]+" ");
+				}
+				System.out.println();
+	            }
+			    System.out.println();
 		}
-
 	}
-
 }
