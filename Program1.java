@@ -1,21 +1,23 @@
 import java.util.Scanner;
-class Program1 
+ class Program1 
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter the size of array");
+		Scanner scan = new Scanner (System.in);
+		System.out.println("Enter the sixe of the array ");
 		int[]arr = new int[scan.nextInt()];
-		System.out.println("Enter the elements in array");
+		System.out.println("Enter the values to be stored in the array ");
 		for(int i=0;i<=arr.length-1;i++)
 		{
-			arr[i]=scan.nextInt();
+			arr[i] = scan.nextInt();
 		}
-			System.out.println("The elements stored are:");
-			for(int i=0;i<=arr.length-1;i++)
-			{
-				System.out.println(arr[i]);
-			}
+		int res=0;
+		for(int i=0;i<=arr.length-1;i++)
+		{
+			res += arr[i];
+		}
+		System.out.println("Addition result is :"+res);
+				
 	}
 
 }
